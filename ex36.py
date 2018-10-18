@@ -1,8 +1,16 @@
 # Text-based Strategy Game: Your First Meetup in A Foreign Country
 # Exercise 36 in Learn Python the Hard Way
+from sys import exit
 
 # LEAVE FUNCTION
 # go home and end game
+def go_home():
+    print("The trick to going to a meetup is to actually stay at the meetup.")
+    print("How are you ever going to meet other developers if you don't go where they hang out?")
+    print("On your walk home you are filled with fomo and start to wish you had stayed.")
+    print("You resolve that the next time you go to a meetup you'll actually stay at the meetup!")
+    exit(0)
+
 
 # LIST OF BEERS
 # Victoria, Indio, a local IPA, Corona Light
