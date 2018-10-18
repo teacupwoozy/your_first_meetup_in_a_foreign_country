@@ -2,8 +2,13 @@
 # Exercise 36 in Learn Python the Hard Way
 from sys import exit
 
-# LEAVE FUNCTION
-# go home and end game
+# LIST OF BEERS
+beer = ['Victoria', 'Indio', 'a local IPA', 'Corona Light']
+
+# LIST OF SNACKS
+snacks = ['cacahuates japonesa', 'chicharon', 'chapulines']
+
+# LEAVE FUNCTION -- go home and end game
 def go_home():
     print("The trick to going to a meetup is to actually stay at the meetup.")
     print("How are you ever going to meet other developers if you don't go where they hang out?")
@@ -11,25 +16,10 @@ def go_home():
     print("You resolve that the next time you go to a meetup you'll actually stay at the meetup!")
     exit(0)
 
-# PRESENTATION ROOM FUNCTION
-def presentation_room():
-    print("You walk into the room where the presenations will happen. A big screen is set up at the front of the room and there are twenty rows of chairs.")
-    print("Where are you going to sit?")
-    print("1. In the front row.")
-    print("2. A few rows back.")
-    print("3. At the back of the room in the very last row of chairs.")
-    seat_selection = input("🌈 ")
-
-
-
-# LIST OF BEERS
-beer = ['Victoria', 'Indio', 'a local IPA', 'Corona Light']
-
-# LIST OF SNACKS
-snacks = ['cacahuates japonesa', 'chicharon', 'chapulines']
-
 # FOYER
-# Print intro language
+def foyer():
+    # Print intro language
+    
 
 # Decision point: check in dude speaking Spanish v quickly c slang and waiving a roll of raffle tickets around. No compredes.
 # 1. Turn around, leave, go home --> leave function
@@ -44,6 +34,38 @@ snacks = ['cacahuates japonesa', 'chicharon', 'chapulines']
 # Select and store snack choice.
 
 # He gives you two tickets and tells you to continue upstairs. --> Bar
+
+
+
+
+# PRESENTATION ROOM FUNCTION -- enter presentation room
+def presentation_room():
+    print("You walk into the room where the presenations will happen. A big screen is set up at the front of the room and there are twenty rows of chairs.")
+    print("Where are you going to sit?")
+    print("1. In the front row.")
+    print("2. A few rows back.")
+    print("3. At the back of the room in the very last row of chairs.")
+    seat_selection = int(input("🌈 "))
+
+    if seat_selection == 1:
+        print("You walk to the front of the room and sit down in a chair. Just as you're getting comfortable, someone walks up to you and is talking to you in Spanish.")
+        print("After they repeat themselves a couple of times, you realize that the front row is reserved for presenters and you are sitting in their chair.")
+        presentation_room()
+    
+    elif seat_selection == 2:
+        print("This is a perfect spot: you're close enough that you will be able to to see the screen and hear the presenters as they're speaking in Spanish.")
+    
+    else:
+        print("You choose a seat at the very back of the room. You end up not being able to see the screen. And, because of two people next to you loudly talking, you miss most of what the presenters are saying.")
+
+
+
+# NOT VALID SELECTION -- keeping this?
+def not_valid():
+    print("Sorry, that's not a valid selection.")
+
+# test
+
 
 
 
