@@ -11,13 +11,22 @@ def go_home():
     print("You resolve that the next time you go to a meetup you'll actually stay at the meetup!")
     exit(0)
 
+# PRESENTATION ROOM FUNCTION
+def presentation_room():
+    print("You walk into the room where the presenations will happen. A big screen is set up at the front of the room and there are twenty rows of chairs.")
+    print("Where are you going to sit?")
+    print("1. In the front row.")
+    print("2. A few rows back.")
+    print("3. At the back of the room in the very last row of chairs.")
+    seat_selection = input("🌈 ")
+
+
+
 # LIST OF BEERS
 beer = ['Victoria', 'Indio', 'a local IPA', 'Corona Light']
 
 # LIST OF SNACKS
 snacks = ['cacahuates japonesa', 'chicharon', 'chapulines']
-print(snacks, beer)
-
 
 # FOYER
 # Print intro language
