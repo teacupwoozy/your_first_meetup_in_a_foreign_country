@@ -11,12 +11,12 @@ def go_home():
     print("You resolve that the next time you go to a meetup you'll actually stay at the meetup!")
     exit(0)
 
-
 # LIST OF BEERS
-# Victoria, Indio, a local IPA, Corona Light
+beer = ['Victoria', 'Indio', 'a local IPA', 'Corona Light']
 
 # LIST OF SNACKS
-# Cacahuates japoneses, chicharon, chapulines
+snacks = ['cacahuates japonesa', 'chicharon', 'chapulines']
+print(snacks, beer)
 
 
 # FOYER
