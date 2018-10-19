@@ -3,10 +3,18 @@
 from sys import exit
 
 # LIST OF BEERS
-beer = ['Victoria', 'Indio', 'a local IPA', 'Corona Light']
+beers = ['Victoria', 'Indio', 'a local IPA', 'Corona Light']
 
 # LIST OF SNACKS
 snacks = ['cacahuates japonesa', 'chicharon', 'chapulines']
+
+# WELCOME
+def welcome():
+    print("You are an American living in Mexico while you learn to program and speak Spanish.")
+    print("You know that you need to try and network with other people in tech, but are nervous about it because you speak Spanish poorly and are just starting out as a programmer.")
+    print("You find out about a tech meetup later in the week and decide to go, despite your misgivings.")
+    print("On the day of the meetup, you walk to an old colonial building that now serves as an art space and a community meeting space.")
+    foyer()
 
 # LEAVE FUNCTION -- go home and end game
 def go_home():
@@ -19,13 +27,37 @@ def go_home():
 # FOYER
 def foyer():
     # Print intro language
-    
+    print("You walk through the front entrance and there is an official-looking man sitting at a desk.")
+    print("He starts speaking to you very quickly and you notice he's using lots of slang.")
+    print("He's waving around a roll of raffle tickets and you can't follow what he's saying.")
+    # Decision point: check in dude speaking Spanish v quickly c slang and waiving a roll of raffle tickets around. No compredes.
+    print("What do you do?")
+    # 1. Turn around, leave, go home --> leave function
+    print("1. Turn around, exit out the front door, and walk home.")
+    # 2. Decide to stay and try your best to learn something and talk to strangers.
+    print("2. Realize this is just a small obstacle, take a deep breath, and attempt to understand what is going on.")
+    print("How will you proceed?")
+    foyer_choice = int(input("🌈 "))
 
-# Decision point: check in dude speaking Spanish v quickly c slang and waiving a roll of raffle tickets around. No compredes.
-# 1. Turn around, leave, go home --> leave function
-# 2. Decide to stay and try your best to learn something and talk to strangers.
-# Tell him you are learning Spanish y por fa' despacio. He apologizes, repeats himself more slowly. He's telling you 
-# about your free beer ticket and a snack. He lists the beers available, you must select your choice so he can write it down.
+    if foyer_choice == 1:
+        go_home()
+    elif foyer_choice == 2:
+        # Tell him you are learning Spanish y por fa' despacio. He apologizes, repeats himself more slowly. He's telling you 
+        # about your free beer ticket and a snack. He lists the beers available, you must select your choice so he can write it down.
+        print("In Spanish, explain that you are learning Spanish and ask if he could speak slower.")
+        print("He immediately appologizes and then repeats himself speaking much slower. He explains you get a free beer ticket and a snack at the meetup.")
+        print("He says he needs to keep track of which beers people want and motions to the list on his clipboard.")
+        print(f"We've got {', '.join(beers)}. Which would you like?")
+        beer_choice = input("🍺 ").upper()
+        print(beer_choice)
+        # if VICTORIA in beers
+
+        # ===== START HERE =======
+
+    else:
+        print("You can't do that.")
+        foyer()
+
 
 # Print list of beers
 # Select and store beer choice.
@@ -66,7 +98,7 @@ def not_valid():
 
 # test
 
-
+foyer()
 
 
 # BAR
