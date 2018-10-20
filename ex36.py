@@ -6,7 +6,7 @@ from sys import exit
 beers = ['Victoria', 'Indio', 'a local IPA', 'Corona Light']
 
 # LIST OF SNACKS
-snacks = ['cacahuates japonesa', 'chicharon', 'chapulines']
+botanas = ['cacahuates japonesa', 'chicharon', 'chapulines', 'palomitas']
 
 # WELCOME
 def welcome():
@@ -47,25 +47,84 @@ def foyer():
         print("In Spanish, explain that you are learning Spanish and ask if he could speak slower.")
         print("He immediately appologizes and then repeats himself speaking much slower. He explains you get a free beer ticket and a snack at the meetup.")
         print("He says he needs to keep track of which beers people want and motions to the list on his clipboard.")
-        print(f"We've got {', '.join(beers)}. Which would you like?")
+        # Print list of beers
+        print(f"He tells you they've got {', '.join(beers)}. Which would you like?")
+        # Select and store beer choice.
         beer_choice = input("🍺 ").upper()
-        print(beer_choice)
-        # if VICTORIA in beers
-
-        # ===== START HERE =======
-
+        
+        # If statements for beer_choice
+        if "VICTORIA" in beer_choice:
+            print("A worthy choice.")
+            snacks()
+        elif "INDIO" in beer_choice:
+            print("Classic choice.")
+            snacks()
+        elif "IPA" in beer_choice:
+            print("Such a hipster. ¡Salud!")
+            snacks()
+        elif "CORONA" in beer_choice:
+            print("Hmmmm....")
+            snacks()
+        else:
+            print("That's not an option. I guess no beer for you.")
+            snacks()
     else:
         print("You can't do that.")
         foyer()
 
 
-# Print list of beers
-# Select and store beer choice.
-
 # Print list of snacks.
 # Select and store snack choice.
+def snacks():
+    print("He then tells you everyone gets snacks too!")
+    print(f"He tells you they've got {', '.join(botanas)}. Which would you like?")
+    snack_choice = input("🍿 ").upper()
+    print(snack_choice)
+    # If statement for snack selection
+    if "CACAHUATES" in snack_choice:
+        print("Thats my favorite snack!")
+    elif "CHICHARON" in snack_choice:
+        print("¡Que rico!")
+    elif "CHAPULINES" in snack_choice:
+        print("Tasty!")
+    elif "PALOMITAS" in snack_choice:
+        print("I could eat palomitas every single day!")
+    else:
+        print("That wasn't one of the choices. I guess no snacks for you. 🤷🏻‍♀️")
+    # He gives you two tickets and tells you to continue upstairs. --> Bar
+    print(f"He gives you a drink ticket, your {snack_choice.lower()}, then tells you to go upstairs. ")
 
-# He gives you two tickets and tells you to continue upstairs. --> Bar
+
+# BAR
+
+# Describe the terrace that has been converted to a make-shift bar, where people are standing around in small groups.
+
+# Everyone seems to know each other and is speaking Spanish. Ug. Do you:
+# 1. Turn around, leave, go home --> leave function
+# 2. Decide to stay and try your best to learn something and talk to strangers.
+
+# Give yourself something to do, walk up to the bar, and hold out your drink ticket.
+# Bartender takes your drink ticket, gives the list of options
+# Select your choice.
+
+# The talk doesn't start for 30 minutes, what do you do?
+# 1. Slam your beer and order more
+    # How many more beers do you drink?
+    # one more: drink it, then --> presentation room
+    # 2 - 3 more: get lost trying to find bathroom, finally do and then discover there's no toilet paper. --> presentation room
+    # 4+ more: Wander into the offices while trying to find the bathroom and end up locked in their bathroom. Miss 
+    # presentations --> end game
+# 2. Drink your beer (maybe make some friends)
+    # A woman in a group standing next to you at the bar says hi. She's wearing blinking ßrainbow LEDs in her hair.
+    # 1. You tell her they're cool: she says thanks and starts telling you how she programmed them. You talk w the group.
+        # A guy comes up with a bag of snacks, he lists them and asks which you would like.
+        # leave and --> leave function
+        # --> presentation room (skip where to sit)
+    # 2. You take a swig of your beer, then --> presentation room
+# 3. Take your beer into the presentation room (dodge creeper)
+    # Good job! A creeper had been eyeing you and was just about to walk over and start hitting on you --> presentation room
+
+
 
 
 
@@ -101,34 +160,6 @@ def not_valid():
 foyer()
 
 
-# BAR
-
-# Describe the terrace that has been converted to a make-shift bar, where people are standing around in small groups.
-
-# Everyone seems to know each other and is speaking Spanish. Ug. Do you:
-# 1. Turn around, leave, go home --> leave function
-# 2. Decide to stay and try your best to learn something and talk to strangers.
-
-# Give yourself something to do, walk up to the bar, and hold out your drink ticket.
-# Bartender takes your drink ticket, gives the list of options
-# Select your choice.
-
-# The talk doesn't start for 30 minutes, what do you do?
-# 1. Slam your beer and order more
-    # How many more beers do you drink?
-    # one more: drink it, then --> presentation room
-    # 2 - 3 more: get lost trying to find bathroom, finally do and then discover there's no toilet paper. --> presentation room
-    # 4+ more: Wander into the offices while trying to find the bathroom and end up locked in their bathroom. Miss 
-    # presentations --> end game
-# 2. Drink your beer (maybe make some friends)
-    # A woman in a group standing next to you at the bar says hi. She's wearing blinking ßrainbow LEDs in her hair.
-    # 1. You tell her they're cool: she says thanks and starts telling you how she programmed them. You talk w the group.
-        # A guy comes up with a bag of snacks, he lists them and asks which you would like.
-        # leave and --> leave function
-        # --> presentation room (skip where to sit)
-    # 2. You take a swig of your beer, then --> presentation room
-# 3. Take your beer into the presentation room (dodge creeper)
-    # Good job! A creeper had been eyeing you and was just about to walk over and start hitting on you --> presentation room
 
 
 
