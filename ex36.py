@@ -156,10 +156,26 @@ def terrace_decision():
 
 # How drunk are you getting?
 def drunk_decision():
-    print("In a feat that makes Homer Simpson look like a teetotaler, you finish your beer in 7 seconds.")
+    print("In a feat that makes Homer Simpson look like a teetotaler, you finish your beer in 7 seconds flat.")
     print("You turn around and ask the bartender for another beer.")
-    number_of_beers = int(input("How many more beers do you drink? 🍺 "))
-    # TBD
+    number_of_beers = int(input("How many more beers do you end up drinking before the presentations start? 🍺 "))
+    if number_of_beers == 1:
+        print("It's good that you didn't leave and are sticking with the plan to attend this meetup, but you're never actually going to meet anyone if you only hang out with your beer.")
+    elif number_of_beers == 2:
+        print("Whew! You're on a roll and, at this point, you definitely have lost your ability to speak Spanish.")
+    elif number_of_beers == 3 or number_of_beers == 4:
+        print("That is a lot of beer to drink in 30 minutes. Best to go home now. Be sure to use the handrail as you go down the stairs.")
+    elif number_of_beers >= 5 and number_of_beers <= 10:
+        print("Well, this didn't go as planned. You end up passing out on the far side of the terrace, behind the tinaco.")
+        print("You wake up five hours later and find that you've been locked inside. It is a long, cold night for you.")
+        exit(0)
+    elif number_of_beers > 10:
+        print("Are you even alive anymore?")
+        exit(0)
+    # FIX INSECTO -- doesn't work with non-int input. Maybe use if input not an int (false)... then....
+    else:
+        print("That is not a valid input.")
+        drunk_decision()
 
 # The talk doesn't start for 30 minutes, what do you do?
 # 1. Slam your beer and order more
