@@ -140,13 +140,18 @@ def terrace_decision():
     if "1" in terrace_choice:
         drunk_decision()
     elif "2" in terrace_choice:
+        # A woman in a group standing next to you at the bar says hi. She's wearing blinking ßrainbow LEDs in her hair.
+    # 1. You tell her they're cool: she says thanks and starts telling you how she programmed them. You talk w the group.
+        # A guy comes up with a bag of snacks, he lists them and asks which you would like.
+        # leave and --> leave function
+        # --> presentation room (skip where to sit)
         print("You turn towards the group of three people standing just to your right.")
-        print("A woman a little younger than you looks your way and says, \"¡Que padre! Me encanta tu suéter.\"")
-        print("You laugh a little and thank her, then tell her that it's your favorite.")
-        print("She asks if you're a programmer and you tell her you're learning.")
-        print("The man in the group asks what you're learning, and you tell them.")
+        print("A woman a little younger than you looks your way and says, \"¡Que padre! Me encanta tu suéter.\" She's wearing a coronet of blinking rainbow LEDs in her hair.")
+        print("You smile and thank her, then tell her that it's your favorite. You tell her how cool her LEDs are.")
+        print("She starts explaining how she made the programming that's directing the lights. She has you get out your phone and go to her website where you can change the color patterns live.")
+        print("You hang out with the group until it's time for the presentations to start.")
         print("")
-        print("You spend the next 35 minutes happily chatting away with your new friends. You learn about a record store that also hosts coding nights twice a week.")
+        print("You spend the next 35 minutes happily chatting away with your new friends. You learn about a record store that also hosts coding nights twice a week and you exchange WhatsApp infor with all of them.")
         presentation_room()
     elif "3" in terrace_choice:
         print("That was a good call. A creeper in the corner had been watching you and was just about to walk over to you and start hitting on you.")
@@ -185,27 +190,6 @@ def drunk_decision():
         print("That is not a valid input.")
         drunk_decision()
 
-# The talk doesn't start for 30 minutes, what do you do?
-# 1. Slam your beer and order more
-    # How many more beers do you drink?
-    # one more: drink it, then --> presentation room
-    # 2 - 3 more: get lost trying to find bathroom, finally do and then discover there's no toilet paper. --> presentation room
-    # 4+ more: Wander into the offices while trying to find the bathroom and end up locked in their bathroom. Miss 
-    # presentations --> end game
-# 2. Drink your beer (maybe make some friends)
-    # A woman in a group standing next to you at the bar says hi. She's wearing blinking ßrainbow LEDs in her hair.
-    # 1. You tell her they're cool: she says thanks and starts telling you how she programmed them. You talk w the group.
-        # A guy comes up with a bag of snacks, he lists them and asks which you would like.
-        # leave and --> leave function
-        # --> presentation room (skip where to sit)
-    # 2. You take a swig of your beer, then --> presentation room
-# 3. Take your beer into the presentation room (dodge creeper)
-    # Good job! A creeper had been eyeing you and was just about to walk over and start hitting on you --> presentation room
-
-
-
-
-
 
 # PRESENTATION ROOM FUNCTION -- enter presentation room
 def presentation_room():
@@ -226,7 +210,6 @@ def presentation_room():
     
     else:
         print("You choose a seat at the very back of the room. You end up not being able to see the screen. And, because of two people next to you loudly talking, you miss most of what the presenters are saying.")
-
 
 
 # NOT VALID SELECTION -- keeping this?
