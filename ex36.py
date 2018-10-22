@@ -152,6 +152,7 @@ def terrace_decision():
         print("You hang out with the group until it's time for the presentations to start.")
         print("")
         print("You spend the next 35 minutes happily chatting away with your new friends. You learn about a record store that also hosts coding nights twice a week and you exchange WhatsApp infor with all of them.")
+        print("It turns out your new friends are giving one of the talks, so they leave to go finish setting up their presentation.")
         presentation_room()
     elif "3" in terrace_choice:
         print("That was a good call. A creeper in the corner had been watching you and was just about to walk over to you and start hitting on you.")
@@ -204,31 +205,25 @@ def presentation_room():
         print("You walk to the front of the room and sit down in a chair. Just as you're getting comfortable, someone walks up to you and is talking to you in Spanish.")
         print("After they repeat themselves a couple of times, you realize that the front row is reserved for presenters and you are sitting in their chair.")
         presentation_room()
-    
     elif seat_selection == 2:
         print("This is a perfect spot: you're close enough that you will be able to to see the screen and hear the presenters as they're speaking in Spanish.")
-    
     else:
         print("You choose a seat at the very back of the room. You end up not being able to see the screen. And, because of two people next to you loudly talking, you miss most of what the presenters are saying.")
 
 
-# NOT VALID SELECTION -- keeping this?
-def not_valid():
-    print("Sorry, that's not a valid selection.")
-
-# TEST
-
-
-# welcome()
-
-
-
-# PRESENTATION ROOM
-# Where to sit
-# 1. Front row: in presenter's seat, have to move, loop back to where to sit
-# 2. Few rows back: Good job! You can see and hear the presentations --> After presentations
-# 3. Back of the room: can't hear, barely see anything. --> After presentations
-
+def after_presentations():
+    print("The presentations have ended. As you're getting up to leave, you see someone two chairs over putting away a laptop with a bunch of RStudio stickers on it.")
+    print("Recently, you've been learning about large datasets and how to create data visualizations. What do you do?")
+    print("1. Leave. Stranger Danger is real.")
+    print("2. Say is iffy Spanish \"¿Qué usas RStudio?\"")
+    rstudio_choice = input("What do you do? 🤓 ")
+    if rstudio_choice == "1":
+        go_home()
+    elif rstudio_choice == "2":
+        rstudio_fun()
+    else:
+        print("That wasn't an option.")
+        after_presentations()
 # After presentations
 # The presenations have finished, as you're getting up to leave you see s/o at the end of your row putting away a laptop with
 # a bunch of R Studio stickers on it. You have been learning about large data sets and creating data visualizations, what do you do:
@@ -239,3 +234,14 @@ def not_valid():
 # 1. Accept invite, attend talk, and ultimately land a great internship where you learn tons and work on great projects. This 
 # work directly leads to your first job and a successful and exciting career in technology.
 # 2. Make some non-commital reply and quickly --> Leave function
+
+
+# NOT VALID SELECTION -- keeping this?
+def not_valid():
+    print("Sorry, that's not a valid selection.")
+
+    
+# TEST
+
+
+# welcome()
