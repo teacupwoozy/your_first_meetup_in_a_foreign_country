@@ -109,15 +109,22 @@ def arrive_on_terrace():
         go_home()
     elif terrace_choice == 2:
         print("Good choice! It's not easy stepping out of your comfort zone - way to be brave!")
+        the_bar()
     # FIX INSECTO -- not working if a non-int is input
     else:
         print("That's not one of your options, try again.")
         arrive_on_terrace()
 
 
-# Give yourself something to do, walk up to the bar, and hold out your drink ticket.
-# Bartender takes your drink ticket, gives the list of options
-# Select your choice.
+# THE BAR
+# Function to get free beer at bar
+def the_bar():
+    print("You decide to give yourself something to do and go collect your free drink.")
+    print("You want up to the bar and say hello, then hold out your drink ticket and say, \"Una cervecita por favor.\"")
+    print(f"The bartender takes your ticket and tells you they have {', '.join(beers)}.")
+    beer_choice = input("What beer is your choice? ")
+    print(f"The bartender hands you your {beer_choice}.")
+    print("You take it and step away from the bar as your scan the terrace.")
 
 # The talk doesn't start for 30 minutes, what do you do?
 # 1. Slam your beer and order more
