@@ -125,6 +125,41 @@ def the_bar():
     beer_choice = input("What beer is your choice? ")
     print(f"The bartender hands you your {beer_choice}.")
     print("You take it and step away from the bar as your scan the terrace.")
+    terrace_decision()
+
+# THE TERRACE
+# What to do while stalling on the terrace.
+def terrace_decision():
+    print("You stand there looking around at everyone. They are all still talking in small groups and no one has magically invited you to join them.")
+    print("You take a swig of your beer. Because it's Mexico and everything always starts late, you know the presentations won't start for 30 minutes. You realize you can do one of three things:")
+    print("1. Slam your beer and go order another one.")
+    print("2. Take another sip of your beer and decide to try and talk to someone.")
+    print("3. Take yourself and your beer into the presentation room.")
+    terrace_choice = input("What do you do? ")
+    print(terrace_choice)
+    if "1" in terrace_choice:
+        drunk_decision()
+    elif "2" in terrace_choice:
+        print("You turn towards the group of three people standing just to your right.")
+        print("A woman a little younger than you looks your way and says, \"¡Que padre! Me encanta tu suéter.\"")
+        print("You laugh a little and thank her, then tell her that it's your favorite.")
+        print("She asks if you're a programmer and you tell her you're learning.")
+        print("The man in the group asks what you're learning, and you tell them.")
+        print("")
+        print("You spend the next 35 minutes happily chatting away with your new friends. You learn about a record store that also hosts coding nights twice a week.")
+        presentation_room()
+    elif "3" in terrace_choice:
+        presentation_room()
+    else:
+        print("That's not one of your options, try again.")
+        terrace_decision()
+
+# How drunk are you getting?
+def drunk_decision():
+    print("In a feat that makes Homer Simpson look like a teetotaler, you finish your beer in 7 seconds.")
+    print("You turn around and ask the bartender for another beer.")
+    number_of_beers = int(input("How many more beers do you drink? 🍺 "))
+    # TBD
 
 # The talk doesn't start for 30 minutes, what do you do?
 # 1. Slam your beer and order more
