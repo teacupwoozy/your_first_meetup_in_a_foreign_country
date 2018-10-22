@@ -79,7 +79,6 @@ def snacks():
     print("He then tells you everyone gets snacks too!")
     print(f"He tells you they've got {', '.join(botanas)}. Which would you like?")
     snack_choice = input("🍿 ").upper()
-    print(snack_choice)
     # If statement for snack selection
     if "CACAHUATES" in snack_choice:
         print("Thats my favorite snack!")
@@ -92,16 +91,29 @@ def snacks():
     else:
         print("That wasn't one of the choices. I guess no snacks for you. 🤷🏻‍♀️")
     # He gives you two tickets and tells you to continue upstairs. --> Bar
-    print(f"He gives you a drink ticket, your {snack_choice.lower()}, then tells you to go upstairs. ")
+    print(f"He gives you a drink ticket, your {snack_choice.lower()}, then tells you the meetup is upstairs.")
+    arrive_on_terrace()
 
+# TERRACE
+def arrive_on_terrace():
+    # Describe the terrace that has been converted to a make-shift bar, where people are standing around in small groups.
+    print("You walk up the stairs onto a rooftop terrace that has a bar set up to your right. And, to the left is a big open doorway to the room where the presentations will occur.")
+    print("There are a scattering of people milling around on the terrace and chatting in small groups.")
+    print("You notice everyone is speaking in Spanish and seems like they've known each other for years.")
+    print("Ug. Your Stranger Danger switch flips on. You have two options:")
+    print("1. Turn around, leave, go home.")
+    print("2. Decide to stay and try your best to learn something and talk to strangers.")
+    terrace_choice = int(input("What do you do? "))
+    # Proceed with terrace choice
+    if terrace_choice == 1:
+        go_home()
+    elif terrace_choice == 2:
+        print("Good choice! It's not easy stepping out of your comfort zone - way to be brave!")
+    # FIX INSECTO -- not working if a non-int is input
+    else:
+        print("That's not one of your options, try again.")
+        arrive_on_terrace()
 
-# BAR
-
-# Describe the terrace that has been converted to a make-shift bar, where people are standing around in small groups.
-
-# Everyone seems to know each other and is speaking Spanish. Ug. Do you:
-# 1. Turn around, leave, go home --> leave function
-# 2. Decide to stay and try your best to learn something and talk to strangers.
 
 # Give yourself something to do, walk up to the bar, and hold out your drink ticket.
 # Bartender takes your drink ticket, gives the list of options
