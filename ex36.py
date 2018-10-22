@@ -210,7 +210,7 @@ def presentation_room():
     else:
         print("You choose a seat at the very back of the room. You end up not being able to see the screen. And, because of two people next to you loudly talking, you miss most of what the presenters are saying.")
 
-
+# After presentations
 def after_presentations():
     print("The presentations have ended. As you're getting up to leave, you see someone two chairs over putting away a laptop with a bunch of RStudio stickers on it.")
     print("Recently, you've been learning about large datasets and how to create data visualizations. What do you do?")
@@ -220,20 +220,22 @@ def after_presentations():
     if rstudio_choice == "1":
         go_home()
     elif rstudio_choice == "2":
-        rstudio_fun()
+        rstudio_connections()
     else:
         print("That wasn't an option.")
         after_presentations()
-# After presentations
-# The presenations have finished, as you're getting up to leave you see s/o at the end of your row putting away a laptop with
-# a bunch of R Studio stickers on it. You have been learning about large data sets and creating data visualizations, what do you do:
-# 1. Leave --> leave function
-# 2. Say in broken Spanish "What do you use R Studio for?" He works for a company using data for social justice projects. He
-# invites you to a lunchtime talk later that week at his work. A co-worker will be talking about their latest data visualization project. 
-# What do you do
+
+# RStudio Fun
+def rstudio_connections():
+    print("He tells you he works for a local organization that is working to reduce poverty in Latin America. You exclaim, \"¡Qué padre!\"")
+    print("The two of you talk a while longer and learn he's on a team that's building an app that will use data visualizations to tell different stories about poverty.")
+    print("It turns out that his teammates are giving a lunchtime talk next week and it will be all about their app project. He invites you to the talk, you exchange WhatsApp, and he messages you the details.")
+    print("Good job networking!")
+
+# ADD: add to go home succeccful function a test to see if this function ran. If so, add the below!
 # 1. Accept invite, attend talk, and ultimately land a great internship where you learn tons and work on great projects. This 
 # work directly leads to your first job and a successful and exciting career in technology.
-# 2. Make some non-commital reply and quickly --> Leave function
+
 
 
 # NOT VALID SELECTION -- keeping this?
@@ -242,6 +244,7 @@ def not_valid():
 
     
 # TEST
+
 
 
 # welcome()
