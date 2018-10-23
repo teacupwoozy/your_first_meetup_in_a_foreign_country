@@ -46,8 +46,6 @@ def foyer():
     if foyer_choice == "1":
         go_home()
     elif foyer_choice == "2":
-        # Tell him you are learning Spanish y por fa' despacio. He apologizes, repeats himself more slowly. He's telling you 
-        # about your free beer ticket and a snack. He lists the beers available, you must select your choice so he can write it down.
         print("In Spanish, explain that you are learning Spanish and ask if he could speak slower.")
         print("He immediately appologizes and then repeats himself speaking much slower. He explains you get a free beer ticket and a snack at the meetup.")
         print("He says he needs to keep track of which beers people want and motions to the list on his clipboard.")
@@ -76,8 +74,7 @@ def foyer():
         print("You can't do that.")
         foyer()
 
-# Print list of snacks.
-# Select and store snack choice.
+# Print list of snacks. Then select and store snack choice.
 def snacks():
     print("He then tells you everyone gets snacks too!")
     print(f"He tells you they've got {', '.join(botanas)}. Which would you like?")
@@ -93,7 +90,7 @@ def snacks():
         print("I could eat palomitas every single day!")
     else:
         print("That wasn't one of the choices. I guess no snacks for you. 🤷🏻‍♀️")
-    # He gives you two tickets and tells you to continue upstairs. --> Bar
+    # He gives you two tickets and tells you to continue upstairs.
     print(f"He gives you a drink ticket, your {snack_choice}, then tells you the meetup is upstairs.")
     arrive_on_terrace()
 
@@ -116,7 +113,6 @@ def arrive_on_terrace():
     else:
         print("That's not one of your options, try again.")
         arrive_on_terrace()
-
 
 # THE BAR
 # Function to get free beer at bar
@@ -164,11 +160,10 @@ def drunk_decision():
     print("You turn around and ask the bartender for another beer.")
     # Get user input for number of beers
     number_of_beers = input("How many more beers do you end up drinking before the presentations start? 🍺 ")
-    # Verify user input is an int -- if not drunk_decision()
+    # Verify user input is an int -- if not, --> drunk_decision()
     if (number_of_beers.isdigit()):
         # Convert user input to int
         number_of_beers = int(number_of_beers)
-        print(type(number_of_beers))
         # do what you will with user input
         if number_of_beers == 1:
             print("It's good that you didn't leave and are sticking with the plan to attend this meetup, but you're never actually going to meet anyone if you only hang out with your beer.")
@@ -188,7 +183,7 @@ def drunk_decision():
         else:
             print("Are you even a human being anymore?")
             print("This didn't go as planned. You end up passing out on the far side of the terrace, behind the tinaco.")
-            print("You wake up five hours later and find that you've been locked inside. It is a long, cold night for you.")
+            print("You wake up five hours later and find that you've been locked up on the terrace. It is a long, cold night for you.")
             exit(0)
     else:
         print("That is not a valid input. Please enter a number.")
@@ -202,15 +197,19 @@ def presentation_room():
     print("2. A few rows back.")
     print("3. At the back of the room in the very last row of chairs.")
     seat_selection = input("🌈 ")
-
     if seat_selection == "1":
         print("You walk to the front of the room and sit down in a chair. Just as you're getting comfortable, someone walks up to you and is talking to you in Spanish.")
         print("After they repeat themselves a couple of times, you realize that the front row is reserved for presenters and you are sitting in their chair.")
         presentation_room()
     elif seat_selection == "2":
         print("This is a perfect spot: you're close enough that you will be able to to see the screen and hear the presenters as they're speaking in Spanish.")
-    else:
+        after_presentations()
+    elif seat_selection == "3":
         print("You choose a seat at the very back of the room. You end up not being able to see the screen. And, because of two people next to you loudly talking, you miss most of what the presenters are saying.")
+        after_presentations()
+    else:
+        print("That is not a valid input. Please enter a number.")
+        presentation_room()
 
 # After presentations
 def after_presentations():
@@ -238,10 +237,6 @@ def rstudio_connections():
     print("Good job networking!")
     end_of_night()
 
-# ADD: add to go home succeccful function a test to see if this function ran. If so, add the below!
-# 1. Accept invite, attend talk, and ultimately land a great internship where you learn tons and work on great projects. This 
-# work directly leads to your first job and a successful and exciting career in technology.
-
 def end_of_night():
     print ("Good job getting out of your comfort zone and for coming out tonight. You learned about some cool things!")
     print("You should definitely come to the meetup in a couple weeks.")
@@ -254,8 +249,4 @@ def end_of_night():
         print("Your goal for the next meetup should be to talk to more people!")
         exit(0)
 
-    
-# TEST
-rstudio_connections()
-
-# welcome()
+welcome()
