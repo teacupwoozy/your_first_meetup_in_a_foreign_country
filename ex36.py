@@ -220,7 +220,7 @@ def after_presentations():
     print("2. Say is iffy Spanish \"¿Qué usas RStudio?\"")
     rstudio_choice = input("What do you do? 🤓 ")
     if rstudio_choice == "1":
-        go_home()
+        end_of_night()
     elif rstudio_choice == "2":
         rstudio_connections()
     else:
@@ -230,19 +230,32 @@ def after_presentations():
 # RStudio Fun
 def rstudio_connections():
     # Change rstudio_has_run to true
+    global rstudio_has_run
     rstudio_has_run = True
     print("He tells you he works for a local organization that is working to reduce poverty in Latin America. You exclaim, \"¡Qué padre!\"")
     print("The two of you talk a while longer and learn he's on a team that's building an app that will use data visualizations to tell different stories about poverty.")
     print("It turns out that his teammates are giving a lunchtime talk next week and it will be all about their app project. He invites you to the talk, you exchange WhatsApp, and he messages you the details.")
     print("Good job networking!")
+    end_of_night()
 
 # ADD: add to go home succeccful function a test to see if this function ran. If so, add the below!
 # 1. Accept invite, attend talk, and ultimately land a great internship where you learn tons and work on great projects. This 
 # work directly leads to your first job and a successful and exciting career in technology.
 
+def end_of_night():
+    print ("Good job getting out of your comfort zone and for coming out tonight. You learned about some cool things!")
+    print("You should definitely come to the meetup in a couple weeks.")
+    # Check to see if rstudio_connections was called
+    if rstudio_has_run == True:
+        print("And, because you ended up chatting with your new RStudio friend, you'll end up with your first job offer in about two months!")
+        print("You're amazing!")
+        exit(0)
+    else:
+        print("Your goal for the next meetup should be to talk to more people!")
+        exit(0)
 
     
 # TEST
-drunk_decision()
+rstudio_connections()
 
 # welcome()
