@@ -8,7 +8,7 @@ beers = ['Victoria', 'Indio', 'a local IPA', 'Corona Light']
 # LIST OF SNACKS
 botanas = ['cacahuates japonesa', 'chicharon', 'chapulines', 'palomitas']
 
-# WELCOME
+# WELCOME -- start of game
 def welcome():
     print("You are an American living in Mexico while you learn to program and speak Spanish.")
     print("You know that you need to try and network with other people in tech, but are nervous about it because you speak Spanish poorly and are just starting out as a programmer.")
@@ -37,11 +37,11 @@ def foyer():
     # 2. Decide to stay and try your best to learn something and talk to strangers.
     print("2. Realize this is just a small obstacle, take a deep breath, and attempt to understand what is going on.")
     print("How will you proceed?")
-    foyer_choice = int(input("🌈 "))
+    foyer_choice = input("🌈 ")
 
-    if foyer_choice == 1:
+    if foyer_choice == "1":
         go_home()
-    elif foyer_choice == 2:
+    elif foyer_choice == "2":
         # Tell him you are learning Spanish y por fa' despacio. He apologizes, repeats himself more slowly. He's telling you 
         # about your free beer ticket and a snack. He lists the beers available, you must select your choice so he can write it down.
         print("In Spanish, explain that you are learning Spanish and ask if he could speak slower.")
@@ -50,19 +50,19 @@ def foyer():
         # Print list of beers
         print(f"He tells you they've got {', '.join(beers)}. Which would you like?")
         # Select and store beer choice.
-        beer_choice = input("🍺 ").upper()
+        beer_choice = input("🍺 ").lower()
         
         # If statements for beer_choice
-        if "VICTORIA" in beer_choice:
+        if "victoria" in beer_choice:
             print("A worthy choice.")
             snacks()
-        elif "INDIO" in beer_choice:
+        elif "indio" in beer_choice:
             print("Classic choice.")
             snacks()
-        elif "IPA" in beer_choice:
+        elif "ipa" in beer_choice:
             print("Such a hipster. ¡Salud!")
             snacks()
-        elif "CORONA" in beer_choice:
+        elif "corona" in beer_choice:
             print("Hmmmm....")
             snacks()
         else:
@@ -78,20 +78,20 @@ def foyer():
 def snacks():
     print("He then tells you everyone gets snacks too!")
     print(f"He tells you they've got {', '.join(botanas)}. Which would you like?")
-    snack_choice = input("🍿 ").upper()
+    snack_choice = input("🍿 ").lower()
     # If statement for snack selection
-    if "CACAHUATES" in snack_choice:
+    if "cacahuates" in snack_choice:
         print("Thats my favorite snack!")
-    elif "CHICHARON" in snack_choice:
+    elif "chicharon" in snack_choice:
         print("¡Que rico!")
-    elif "CHAPULINES" in snack_choice:
+    elif "chapulines" in snack_choice:
         print("Tasty!")
-    elif "PALOMITAS" in snack_choice:
+    elif "palomites" in snack_choice:
         print("I could eat palomitas every single day!")
     else:
         print("That wasn't one of the choices. I guess no snacks for you. 🤷🏻‍♀️")
     # He gives you two tickets and tells you to continue upstairs. --> Bar
-    print(f"He gives you a drink ticket, your {snack_choice.lower()}, then tells you the meetup is upstairs.")
+    print(f"He gives you a drink ticket, your {snack_choice}, then tells you the meetup is upstairs.")
     arrive_on_terrace()
 
 # TERRACE
@@ -245,6 +245,6 @@ def not_valid():
     
 # TEST
 
-
+snacks()
 
 # welcome()
