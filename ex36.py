@@ -8,6 +8,10 @@ beers = ['Victoria', 'Indio', 'a local IPA', 'Corona Light']
 # LIST OF SNACKS
 botanas = ['cacahuates japonesa', 'chicharon', 'chapulines', 'palomitas']
 
+# Global var to test if rstudio_connections() was called
+global rstudio_has_run
+rstudio_has_run = False
+
 # WELCOME -- start of game
 def welcome():
     print("You are an American living in Mexico while you learn to program and speak Spanish.")
@@ -187,7 +191,7 @@ def drunk_decision():
             print("You wake up five hours later and find that you've been locked inside. It is a long, cold night for you.")
             exit(0)
     else:
-        print("That is not a valid input.")
+        print("That is not a valid input. Please enter a number.")
         drunk_decision()
 
 # PRESENTATION ROOM FUNCTION -- enter presentation room
@@ -225,6 +229,8 @@ def after_presentations():
 
 # RStudio Fun
 def rstudio_connections():
+    # Change rstudio_has_run to true
+    rstudio_has_run = True
     print("He tells you he works for a local organization that is working to reduce poverty in Latin America. You exclaim, \"¡Qué padre!\"")
     print("The two of you talk a while longer and learn he's on a team that's building an app that will use data visualizations to tell different stories about poverty.")
     print("It turns out that his teammates are giving a lunchtime talk next week and it will be all about their app project. He invites you to the talk, you exchange WhatsApp, and he messages you the details.")
@@ -234,11 +240,6 @@ def rstudio_connections():
 # 1. Accept invite, attend talk, and ultimately land a great internship where you learn tons and work on great projects. This 
 # work directly leads to your first job and a successful and exciting career in technology.
 
-
-
-# NOT VALID SELECTION -- keeping this?
-def not_valid():
-    print("Sorry, that's not a valid selection.")
 
     
 # TEST
