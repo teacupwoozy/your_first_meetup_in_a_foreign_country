@@ -103,11 +103,11 @@ def arrive_on_terrace():
     print("Ug. Your Stranger Danger switch flips on. You have two options:")
     print("1. Turn around, leave, go home.")
     print("2. Decide to stay and try your best to learn something and talk to strangers.")
-    terrace_choice = int(input("What do you do? "))
+    terrace_choice = input("What do you do? ")
     # Proceed with terrace choice
-    if terrace_choice == 1:
+    if terrace_choice == "1":
         go_home()
-    elif terrace_choice == 2:
+    elif terrace_choice == "2":
         print("Good choice! It's not easy stepping out of your comfort zone - way to be brave!")
         the_bar()
     # FIX INSECTO -- not working if a non-int is input
@@ -199,13 +199,13 @@ def presentation_room():
     print("1. In the front row.")
     print("2. A few rows back.")
     print("3. At the back of the room in the very last row of chairs.")
-    seat_selection = int(input("🌈 "))
+    seat_selection = input("🌈 ")
 
-    if seat_selection == 1:
+    if seat_selection == "1":
         print("You walk to the front of the room and sit down in a chair. Just as you're getting comfortable, someone walks up to you and is talking to you in Spanish.")
         print("After they repeat themselves a couple of times, you realize that the front row is reserved for presenters and you are sitting in their chair.")
         presentation_room()
-    elif seat_selection == 2:
+    elif seat_selection == "2":
         print("This is a perfect spot: you're close enough that you will be able to to see the screen and hear the presenters as they're speaking in Spanish.")
     else:
         print("You choose a seat at the very back of the room. You end up not being able to see the screen. And, because of two people next to you loudly talking, you miss most of what the presenters are saying.")
@@ -244,7 +244,7 @@ def not_valid():
 
     
 # TEST
-
-snacks()
+presentation_room()
+# arrive_on_terrace()
 
 # welcome()
