@@ -72,7 +72,6 @@ def foyer():
         print("You can't do that.")
         foyer()
 
-
 # Print list of snacks.
 # Select and store snack choice.
 def snacks():
@@ -110,7 +109,6 @@ def arrive_on_terrace():
     elif terrace_choice == "2":
         print("Good choice! It's not easy stepping out of your comfort zone - way to be brave!")
         the_bar()
-    # FIX INSECTO -- not working if a non-int is input
     else:
         print("That's not one of your options, try again.")
         arrive_on_terrace()
@@ -140,11 +138,6 @@ def terrace_decision():
     if "1" in terrace_choice:
         drunk_decision()
     elif "2" in terrace_choice:
-        # A woman in a group standing next to you at the bar says hi. She's wearing blinking ßrainbow LEDs in her hair.
-    # 1. You tell her they're cool: she says thanks and starts telling you how she programmed them. You talk w the group.
-        # A guy comes up with a bag of snacks, he lists them and asks which you would like.
-        # leave and --> leave function
-        # --> presentation room (skip where to sit)
         print("You turn towards the group of three people standing just to your right.")
         print("A woman a little younger than you looks your way and says, \"¡Que padre! Me encanta tu suéter.\" She's wearing a coronet of blinking rainbow LEDs in her hair.")
         print("You smile and thank her, then tell her that it's your favorite. You tell her how cool her LEDs are.")
@@ -165,32 +158,37 @@ def terrace_decision():
 def drunk_decision():
     print("In a feat that makes Homer Simpson look like a teetotaler, you finish your beer in 7 seconds flat.")
     print("You turn around and ask the bartender for another beer.")
-    number_of_beers = int(input("How many more beers do you end up drinking before the presentations start? 🍺 "))
-    if number_of_beers == 1:
-        print("It's good that you didn't leave and are sticking with the plan to attend this meetup, but you're never actually going to meet anyone if you only hang out with your beer.")
-        presentation_room()
-    elif number_of_beers == 2:
-        print("Whew! You're on a roll and, at this point, you definitely have lost your ability to speak Spanish. Probably not your greatest plan.")
-        presentation_room()
-    elif number_of_beers == 3 or number_of_beers == 4:
-        print("That is a lot of beer to drink in 30 minutes. You get lost trying to find the bathroom.")
-        print("You finally find the bathroom. As you're peeing you look over and see there's no toilet paper 😑")
-        print("After a valiant attempt to drip dry, you make your way back to the terrace.")
-        presentation_room()
-    elif number_of_beers >= 5 and number_of_beers <= 10:
-        print("You end up wandering into the back office while looking for the bathroom. The security guard politely escorts you out of the office while shaking his head and mumbling something aout gringos.")
-        print("You end up locked in the bathroom until after the presentations are over and someone discovers you.")
-        exit(0)
-    elif number_of_beers > 10:
-        print("Are you even a human being anymore?")
-        print("This didn't go as planned. You end up passing out on the far side of the terrace, behind the tinaco.")
-        print("You wake up five hours later and find that you've been locked inside. It is a long, cold night for you.")
-        exit(0)
-    # FIX INSECTO -- doesn't work with non-int input. Maybe use if input not an int (false)... then....
+    # Get user input for number of beers
+    number_of_beers = input("How many more beers do you end up drinking before the presentations start? 🍺 ")
+    # Verify user input is an int -- if not drunk_decision()
+    if (number_of_beers.isdigit()):
+        # Convert user input to int
+        number_of_beers = int(number_of_beers)
+        print(type(number_of_beers))
+        # do what you will with user input
+        if number_of_beers == 1:
+            print("It's good that you didn't leave and are sticking with the plan to attend this meetup, but you're never actually going to meet anyone if you only hang out with your beer.")
+            presentation_room()
+        elif number_of_beers == 2:
+            print("Whew! You're on a roll and, at this point, you definitely have lost your ability to speak Spanish. Probably not your greatest plan.")
+            presentation_room()
+        elif number_of_beers == 3 or number_of_beers == 4:
+            print("That is a lot of beer to drink in 30 minutes. You get lost trying to find the bathroom.")
+            print("You finally find the bathroom. As you're peeing you look over and see there's no toilet paper 😑")
+            print("After a valiant attempt to drip dry, you make your way back to the terrace.")
+            presentation_room()
+        elif number_of_beers >= 5 and number_of_beers <= 10:
+            print("You end up wandering into the back office while looking for the bathroom. The security guard politely escorts you out of the office while shaking his head and mumbling something aout gringos.")
+            print("You end up locked in the bathroom until after the presentations are over and someone discovers you.")
+            exit(0)
+        else:
+            print("Are you even a human being anymore?")
+            print("This didn't go as planned. You end up passing out on the far side of the terrace, behind the tinaco.")
+            print("You wake up five hours later and find that you've been locked inside. It is a long, cold night for you.")
+            exit(0)
     else:
         print("That is not a valid input.")
         drunk_decision()
-
 
 # PRESENTATION ROOM FUNCTION -- enter presentation room
 def presentation_room():
@@ -244,7 +242,6 @@ def not_valid():
 
     
 # TEST
-presentation_room()
-# arrive_on_terrace()
+drunk_decision()
 
 # welcome()
